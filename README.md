@@ -8,3 +8,4 @@
 ![github languages](https://img.shields.io/github/languages/count/daczarne/udemy_dash_mobile)
 ![top language](https://img.shields.io/github/languages/top/daczarne/udemy_dash_mobile)
 
+Anmol Tomar's Udemy course on making mobile-friendly Plotly Dash applications with Python.
