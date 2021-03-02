@@ -11,6 +11,8 @@ dash = "*"
 nbformat = "*"
 ipykernel = "*"
 dash-bootstrap-components = "*"
+requests = "*"
+gunicorn = "*"
 
 [dev-packages]
 
