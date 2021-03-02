@@ -73,6 +73,7 @@ def line_chart(df, df2):
 	# Return the fig
 	return fig
 
+
 # Insatanciate the app
 app = dash.Dash()
 
