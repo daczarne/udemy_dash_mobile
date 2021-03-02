@@ -76,8 +76,10 @@ def line_chart(df, df2):
 
 
 # Insatanciate the app
-app = dash.Dash()
+app = dash.Dash(external_stylesheets = [dbc.themes.FLATLY])
 
+
+# Build the layout
 app.layout = dbc.Container(
 	[
 		dbc.Row(
