@@ -10,6 +10,7 @@ plotly = "*"
 dash = "*"
 nbformat = "*"
 ipykernel = "*"
+dash-bootstrap-components = "*"
 
 [dev-packages]
 
