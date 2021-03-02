@@ -11,6 +11,7 @@ import dash_table
 
 # Instanciate the app
 app = dash.Dash(external_stylesheets = [dbc.themes.FLATLY])
+app.title = "COVID-19 App"
 
 # Get image
 COVID_IMG = "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fbigredmarkets.com%2Fwp-content%2Fuploads%2F2020%2F03%2FCovid-19.png&f=1&nofb=1"
