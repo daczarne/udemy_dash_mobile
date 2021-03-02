@@ -1,42 +1,45 @@
 import dash
 import dash_html_components as html
+import dash_core_components as dcc
 import plotly.graph_objects as go
 import plotly.express as px
-import dash_core_components as dcc
 
 
 # Load the data
 df = px.data.gapminder().query("country=='India'")
 df2 = px.data.gapminder().query("country=='United States'")
 
+
 # Define helper functions
 def bar_chart(df, df2):
-	fig = go.Figure(
-		[
-			go.Bar(
-				x = df["year"],
-				y = df["gdpPercap"],
-				marker_color = "indianred",
-				name = "India"
-			),
-			go.Bar(
-				x = df2["year"],
-				y = df2["gdpPercap"],
-				marker_color = "blue",
-				name = "US"
-			)
-		]
-	)
+	# Build the fig
+	fig = go.Figure([
+		go.Bar(
+			x = df["year"],
+			y = df["gdpPercap"],
+			marker_color = "indianred",
+			name = "India"
+		),
+		go.Bar(
+			x = df2["year"],
+			y = df2["gdpPercap"],
+			marker_color = "blue",
+			name = "US"
+		)
+	])
+	# Build the layout
 	fig.update_layout(
 		title = "GDP per capita over the years",
 		xaxis_title = "Years",
 		yaxis_title = "GDP per capita",
 		barmode = "group"
 	)
-	return fig  
+	# Return the fig
+	return fig
 
-    
+
 def line_chart(df, df2):
+	# Build the figure
 	fig = go.Figure(
 		data = [
 			go.Scatter(
@@ -61,11 +64,13 @@ def line_chart(df, df2):
 			)
 		]
 	)
+	# Build the layout
 	fig.update_layout(
 		title = "Life Expectency over the years",
 		xaxis_title = "Years",
 		yaxis_title = "Life Expectancy (years)"
 	)
+	# Return the fig
 	return fig
 
 # Insatanciate the app
@@ -113,6 +118,7 @@ app.layout = html.Div(
 		)
 	]
 )
+
 
 # Run the app
 if __name__ == '__main__': 
